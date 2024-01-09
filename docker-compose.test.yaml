@@ -26,6 +26,7 @@ services:
       - scanwize_test_app_network
     environment:
       NODE_ENV: test
+      APP_PORT: ${APP_PORT}
 volumes:
   test-db:
     driver: local
