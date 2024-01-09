@@ -21,6 +21,8 @@ services:
       - postgres
     volumes:
       - ./:/app
+      - ./node_modules:/app/node_modules/
+
     networks:
       - scanwize_app_network
 volumes:

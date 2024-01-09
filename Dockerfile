@@ -4,10 +4,13 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+COPY yarn.lock ./
+
+RUN npm install --yes
 
 COPY . .
+COPY start.sh ./
 
-EXPOSE 3000
+RUN chmod +x ./start.sh
 
-ENTRYPOINT ["yarn", "run", "dev"]
+ENTRYPOINT ["./start.sh", "Run Migrations"]
