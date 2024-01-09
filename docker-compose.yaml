@@ -11,7 +11,7 @@ services:
     networks:
       - scanwize_app_network
     ports:
-      - "5433:${POSTGRES_PORT}"
+      - "${POSTGRES_PORT}:5432"
   scanwize-backend:
     build:
       context: .
@@ -24,6 +24,12 @@ services:
       - ./node_modules:/app/node_modules/
     environment:
       APP_PORT: ${APP_PORT}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DATABASE: ${POSTGRES_DATABASE}
+      POSTGRES_PORT: 5432
+      NODE_ENV: development
+
     networks:
       - scanwize_app_network
 volumes:
