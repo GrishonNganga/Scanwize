@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon app.js",
-    "test": "jest --coverage"
+    "test": "node sync_db.js && jest --coverage"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

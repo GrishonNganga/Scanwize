@@ -37,7 +37,6 @@ const { requireUser, requireAdmin } = require('../middlewares');
  *         description: Internal Server Error
  */
 router.post('/signup', async (req, res) => {
-    console.log("------> Somesing")
     try {
         const { username, password, role } = req.body;
 

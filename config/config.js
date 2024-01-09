@@ -7,11 +7,10 @@ module.exports = {
     "dialect": "postgres"
   },
   "test": {
-    "username": process.env.POSTGRES_TESTUSER,
-    "password": process.env.POSTGRES_TESTPASSWORD,
-    "database": process.env.POSTGRES_TESTDATABASE,
-    "port": process.env.POSTGRES_TESTPORT,
-    "host": "scanwize_test_db",
+    "username": process.env.POSTGRES_USER,
+    "password": process.env.POSTGRES_PASSWORD,
+    "database": process.env.POSTGRES_DATABASE,
+    "host": "scanwize_test-db",
     "dialect": "postgres"
   },
   "production": {

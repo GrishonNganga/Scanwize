@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres
-    container_name: scanwize_test_db
+    container_name: scanwize_test-db
     environment:
       POSTGRES_USER: ${POSTGRES_TESTUSER}
       POSTGRES_PASSWORD: ${POSTGRES_TESTPASSWORD}
@@ -11,7 +11,7 @@ services:
     networks:
       - scanwize_test_app_network
     ports:
-      - "${POSTGRES_PORT}:5432"
+      - "${POSTGRES_TESTPORT}:5432"
   scanwize-test-backend:
     build:
       context: .

@@ -11,8 +11,7 @@ describe('Authentication API', () => {
         const res = await request(app)
             .post('/auth/signup')
             .send({ username: 'testuser', password: 'testpassword' });
-        console.log("RES", res)
-
+            
         expect(res.status).toBe(200);
         expect(res.body).toHaveProperty('token');
     });
