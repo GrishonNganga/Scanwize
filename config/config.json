@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "scanwize_user",
+    "password": "scanwize&&strong",
+    "database": "scanwize_db",
+    "host": "scanwize-db",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "scanwize_test_user",
+    "password": "scanwize&&strong",
+    "database": "scanwize_test_db",
+    "host": "scanwize_test_db",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "scanwize&&strong",
+    "database": "scanwize_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
